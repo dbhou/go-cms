@@ -1,15 +1,15 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
+	"cms/controllers/rbac"
 )
 
-type MainController struct {
-	beego.Controller
+type HomeController struct {
+	CommonController
 }
 
-func (c *MainController) Get() {
+func (c *HomeController) Get() {
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
-	c.TplName = "index.tpl"
+	c.TplName = c.GetTemplatetype() + "/index.tpl"
 }
