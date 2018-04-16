@@ -1,14 +1,14 @@
 package routers
 
 import (
-	"cms/controllers"
+	"cms/controllers/home"
 	"cms/controllers/rbac"
 
 	"github.com/astaxie/beego"
 )
 
 func init() {
-	beego.Router("/home", &controllers.HomeController{})
+	beego.Router("/home", &home.HomeController{})
 	beego.Router("/", &rbac.PublicController{}, "*:Index")
 	beego.Router("/public/index", &rbac.PublicController{}, "*:Index")
 	beego.Router("/public/login", &rbac.PublicController{}, "*:Login")
