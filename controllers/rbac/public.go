@@ -40,9 +40,9 @@ func (this *PublicController) Index() {
 		this.Data["userinfo"] = userinfo
 		this.Data["groups"] = groups
 		this.Data["tree"] = &tree
-		if this.GetTemplatetype() != "easyui" {
-			this.Layout = this.GetTemplatetype() + "/public/layout.tpl"
-		}
+		//		if this.GetTemplatetype() != "easyui" {
+		//			this.Layout = this.GetTemplatetype() + "/public/layout.tpl"
+		//		}
 		this.TplName = this.GetTemplatetype() + "/public/index.tpl"
 	}
 }

@@ -2,7 +2,7 @@ package main
 
 import (
 	_ "cms/routers"
-	"mime"
+	//	"mime"
 	"os"
 
 	. "cms/lib"
@@ -19,9 +19,9 @@ func main() {
 }
 
 func initialize() {
-	mime.AddExtensionType(".css", "text/css")
+	//	mime.AddExtensionType(".css", "text/css")
 	//判断初始化参数
-	initArgs()
+	//	initArgs()
 
 	models.Connect()
 
