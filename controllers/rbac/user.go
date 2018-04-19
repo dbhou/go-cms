@@ -29,9 +29,9 @@ func (this *UserController) Index() {
 		tree := this.GetTree()
 		this.Data["tree"] = &tree
 		this.Data["users"] = &users
-		if this.GetTemplatetype() != "easyui" {
-			this.Layout = this.GetTemplatetype() + "/public/layout.tpl"
-		}
+		//		if this.GetTemplatetype() != "easyui" {
+		//			this.Layout = this.GetTemplatetype() + "/public/layout.tpl"
+		//		}
 		this.TplName = this.GetTemplatetype() + "/rbac/user.tpl"
 	}
 
